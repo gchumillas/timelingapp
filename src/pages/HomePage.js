@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text, SectionList } from 'react-native'
 import { getEventsGroupedByDate } from '~/src/providers/events'
 import PageLayout from '~/src/layouts/PageLayout'
 import DateSelector from '~/src/components/inputs/DateSelector'
@@ -10,7 +10,10 @@ const HomePage = () => {
 
   const loadEvents = async _ => {
     const events = await getEventsGroupedByDate()
-    setEventsGroupedByDate(events)
+    // rename `events` by `data`, as the SectionList component requires a `data` property
+    const items = events.map(({ events, ...item }) => ({ data: events, ...item }))
+
+    setEventsGroupedByDate(items)
   }
 
   React.useEffect(_ => {
@@ -19,7 +22,12 @@ const HomePage = () => {
 
   return <PageLayout title="Nearby events">
     <DateSelector numDays={7} value={dateFilter} onChange={setDateFilter} />
-    {eventsGroupedByDate.map(item => <Text key={item.date}>{item.date}</Text>)}
+    <SectionList
+      sections={eventsGroupedByDate}
+      renderSectionHeader={({ section }) => <Text>{section.date}</Text>}
+      renderItem={({ item }) => <Text>{item.userName}</Text>}
+      keyExtractor={item => item.id}
+    />
   </PageLayout>
 }
 
