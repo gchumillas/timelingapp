@@ -32,6 +32,7 @@ const HomePage = () => {
 
   return <PageLayout title="Nearby events">
     <DateSelector numDays={7} value={dateFilter} onChange={setDateFilter} />
+    {/* <Image image={require('../../data/images/picture1.jpg')} style={{ width: 50, height: 50, ...tw('border') }} resizeMode={'cover'} /> */}
     <FlatList
       data={eventsGroupedByDate}
       renderItem={({ item }) => <View>
