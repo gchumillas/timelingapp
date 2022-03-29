@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "TimelingApp",
+    "slug": "TimelingApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
