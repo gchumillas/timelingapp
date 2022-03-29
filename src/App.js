@@ -1,22 +1,11 @@
-import { StatusBar } from 'expo-status-bar'
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import { tw } from '~/src/libs/tailwind'
+import { NativeRouter, Routes, Route } from 'react-router-native'
+import HomePage from './pages/HomePage'
 
 export default function App () {
-  return (
-    <View style={styles.container}>
-      <Text style={tw('text-blue-700')}>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  )
+  return <NativeRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+    </Routes>
+  </NativeRouter>
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})
