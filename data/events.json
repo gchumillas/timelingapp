@@ -1,0 +1,19 @@
+[
+  {
+    "date": "2022/03/29",
+    "events": [
+      { "id": "201", "userId": "101", "userName": "Sandra", "title": "Dinner", "location": "Notting Hill", "image": "data/images/picture1.jpg", "isNew": true },
+      { "id": "202", "userId": "102", "userName": "María", "title": "Going out !!!!!",  "location": "Myfair, Greater London", "image": "data/images/picture2.jpg" },
+      { "id": "203", "userId": "103", "userName": "Antonio", "title": "Lunch", "location": "Shoreditch", "image": "data/images/picture3.jpg" },
+      { "id": "204", "userId": "104", "userName": "Lucía", "title": "Open",  "location": "Brick Lane", "image": "data/images/picture4.jpg" }
+    ]
+  },
+  {
+    "date": "2022/03/28",
+    "events": [
+      { "id": "205", "userId": "105", "userName": "Marco", "title": "Drinks", "location": "Convent Garden", "image": "data/images/picture5.jpg" },
+      { "id": "206", "userId": "106", "userName": "Juan", "title": "Culture",  "location": "Candem town", "image": "data/images/picture6.jpg" },
+      { "id": "207", "userId": "107", "userName": "Vanesa", "title": "Open Mind", "location": "Picadilly", "image": "data/images/picture7.jpg" }
+    ]
+  }
+]
