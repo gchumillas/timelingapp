@@ -3,7 +3,7 @@ import { View, Modal } from 'react-native'
 import { tw } from '~/src/libs/tailwind'
 
 const ModalLayout = ({ children }) => {
-  return <Modal animationType="none">
+  return <Modal animationType="slide">
     <View style={tw('h-full')}>
       {children}
     </View>
