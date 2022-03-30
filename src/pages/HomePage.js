@@ -42,7 +42,7 @@ const HomePage = () => {
   }, [])
 
   return <PageLayout title="Nearby events">
-    <DateSelector numDays={7} value={dateFilter} onChange={setDateFilter} />
+    <DateSelector numDays={7} value={dateFilter} onChange={setDateFilter} style={tw('pb-3')} />
     <FlatList
       data={events}
       renderItem={({ item }) => <View>
@@ -50,6 +50,7 @@ const HomePage = () => {
         <SectionItem events={item.events} />
       </View>}
       keyExtractor={item => item.date}
+      style={tw('pt-3')}
     />
     <Outlet />
   </PageLayout>
