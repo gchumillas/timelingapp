@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import { tw } from '~/src/libs/tailwind'
+import { tw, getColor } from '~/src/libs/tailwind'
 import ExploreIcon from '~/assets/icons/explore.svg'
 import HeartIcon from '~/assets/icons/heart.svg'
 import PersonIcon from '~/assets/icons/person.svg'
@@ -11,19 +11,19 @@ const Footer = _ => {
     <View>
       {/* TODO: create Icon component */}
       {/* TODO: add color property */}
-      <ExploreIcon width={30} height={30} />
+      <ExploreIcon width={30} height={30} color={getColor('gray-900')} />
       <Text>Explore</Text>
     </View>
     <View>
-      <PlusIcon width={30} height={30} />
+      <PlusIcon width={30} height={30} color={getColor('gray-400')} />
       <Text>New Event</Text>
     </View>
     <View>
-      <HeartIcon width={30} height={30} />
+      <HeartIcon width={30} height={30} color={getColor('gray-400')} />
       <Text>Event</Text>
     </View>
     <View>
-      <PersonIcon width={30} height={30} />
+      <PersonIcon width={30} height={30} color={getColor('gray-400')} />
       <Text>Profile</Text>
     </View>
   </View>
