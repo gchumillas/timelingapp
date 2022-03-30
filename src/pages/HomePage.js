@@ -38,7 +38,6 @@ const HomePage = () => {
   }
 
   React.useEffect(_ => {
-    console.log('aaa')
     loadEvents()
   }, [])
 
