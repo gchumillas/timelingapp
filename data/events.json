@@ -1,6 +1,6 @@
 [
   {
-    "date": "2022/03/29",
+    "date": "2022-03-29",
     "events": [
       { "id": "201", "userId": "101", "userName": "Sandra", "title": "Dinner", "location": "Cádiz", "image": "picture1", "featured": true },
       { "id": "202", "userId": "102", "userName": "María", "title": "Going out !!!!!",  "location": "Sevilla", "image": "picture2" },
@@ -9,7 +9,7 @@
     ]
   },
   {
-    "date": "2022/03/28",
+    "date": "2022-03-28",
     "events": [
       { "id": "205", "userId": "105", "userName": "Marco", "title": "Drinks", "location": "Málaga", "image": "picture5" },
       { "id": "206", "userId": "106", "userName": "Juan", "title": "Culture",  "location": "Las Palmas de G.C.", "image": "picture6" },

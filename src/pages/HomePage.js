@@ -1,6 +1,7 @@
 import React from 'react'
 import { Text, View, FlatList } from 'react-native'
 import { Outlet } from 'react-router-native'
+import { DateTime } from 'luxon'
 import { tw } from '~/src/libs/tailwind'
 import { getEventsGroupedByDate } from '~/src/providers/events'
 import { useEvents } from '~/src/store/events'
@@ -26,7 +27,9 @@ const HomePage = () => {
     <FlatList
       data={events}
       renderItem={({ item }) => <View>
-        <Text key={item.date}>{item.date}</Text>
+        <Text key={item.date} style={tw('text-xs text-gray-500 font-semibold mb-4')}>
+          {item.date.toLocaleString(DateTime.DATE_MED)}
+        </Text>
         <FlatList
           data={item.events}
           renderItem={({ item }) => <Thumbnail {...item} />}
