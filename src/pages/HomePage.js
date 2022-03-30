@@ -3,6 +3,7 @@ import { Text, View, FlatList, Image } from 'react-native'
 import { Outlet } from 'react-router-native'
 import { tw } from '~/src/libs/tailwind'
 import { getEventsGroupedByDate } from '~/src/providers/events'
+import { useEvents } from '~/src/store/events'
 import PageLayout from '~/src/layouts/PageLayout'
 import DateSelector from '~/src/components/DateSelector'
 import Link from '~/src/components/Link'
@@ -28,22 +29,23 @@ const SectionItem = ({ events }) => {
 }
 
 const HomePage = () => {
-  const [dateFilter, setDateFilter] = React.useState(null) // DateTime
-  const [eventsGroupedByDate, setEventsGroupedByDate] = React.useState([])
+  const [events, setEvents] = useEvents()
+  const [dateFilter, setDateFilter] = React.useState(null)
 
   const loadEvents = async _ => {
     const events = await getEventsGroupedByDate()
-    setEventsGroupedByDate(events)
+    setEvents(events)
   }
 
   React.useEffect(_ => {
+    console.log('aaa')
     loadEvents()
   }, [])
 
   return <PageLayout title="Nearby events">
     <DateSelector numDays={7} value={dateFilter} onChange={setDateFilter} />
     <FlatList
-      data={eventsGroupedByDate}
+      data={events}
       renderItem={({ item }) => <View>
         <Text key={item.date}>{item.date}</Text>
         <SectionItem events={item.events} />
