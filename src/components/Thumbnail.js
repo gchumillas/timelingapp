@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, Image } from 'react-native'
+import { Text, View, Image, Pressable } from 'react-native'
 import { tw } from '~/src/libs/tailwind'
 import Link from '~/src/components/Link'
 import images from '~/data/images'
@@ -11,7 +11,9 @@ const Thumbnail = ({ id, title, userName, location, image }) => {
     <Link to={`/events/${id}`}>
       <View style={{ ...tw('relative border-1/2 border-gray-400 rounded-lg overflow-hidden'), aspectRatio: 4 / 5 }}>
         <Image source={images[image]} style={{ ...tw('absolute w-full h-full rounded-lg border-2'), borderColor: 'white' }} resizeMode="cover" />
-        <HeartIcon with={18} height={18} />
+        <Pressable style={tw('absolute top-2 right-2')}>
+          <HeartIcon with={18} height={18} color="white" />
+        </Pressable>
         <View style={tw('absolute bottom-2 left-2')}>
           <Text style={tw('text-white text-lg font-bold')}>{title}</Text>
           <Text style={tw('text-white mb-0.5')}>With {userName}</Text>
