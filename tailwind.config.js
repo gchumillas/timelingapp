@@ -8,6 +8,9 @@ module.exports = {
       },
       colors: {
       },
+      borderWidth: {
+        '1/2': 0.5
+      }
     },
   },
   plugins: [],
