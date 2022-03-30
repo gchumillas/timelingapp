@@ -2,18 +2,18 @@
   {
     "date": "2022-03-29",
     "events": [
-      { "id": "201", "userId": "101", "userName": "Sandra", "title": "Dinner", "location": "Cádiz", "image": "picture1", "featured": true },
-      { "id": "202", "userId": "102", "userName": "María", "title": "Going out !!!!!",  "location": "Sevilla", "image": "picture2" },
-      { "id": "203", "userId": "103", "userName": "Antonio", "title": "Lunch", "location": "Jerez", "image": "picture3" },
-      { "id": "204", "userId": "104", "userName": "Lucía", "title": "Open",  "location": "Vigo", "image": "picture4" }
+      { "id": "201", "userId": "101", "userName": "Sandra", "age": 54, "title": "Dinner", "location": "Cádiz", "image": "picture1", "featured": true },
+      { "id": "202", "userId": "102", "userName": "María", "age": 49, "title": "Going out !!!!!",  "location": "Sevilla", "image": "picture2" },
+      { "id": "203", "userId": "103", "userName": "Antonio", "age": 34, "title": "Lunch", "location": "Jerez", "image": "picture3" },
+      { "id": "204", "userId": "104", "userName": "Lucía", "age": 23, "title": "Open",  "location": "Vigo", "image": "picture4" }
     ]
   },
   {
     "date": "2022-03-28",
     "events": [
-      { "id": "205", "userId": "105", "userName": "Marco", "title": "Drinks", "location": "Málaga", "image": "picture5" },
-      { "id": "206", "userId": "106", "userName": "Juan", "title": "Culture",  "location": "Las Palmas de G.C.", "image": "picture6" },
-      { "id": "207", "userId": "107", "userName": "Vanesa", "title": "Open Mind", "location": "Granada", "image": "picture7" }
+      { "id": "205", "userId": "105", "userName": "Marco", "age": 51, "title": "Drinks", "location": "Málaga", "image": "picture5" },
+      { "id": "206", "userId": "106", "userName": "Juan", "age": 25, "title": "Culture",  "location": "Las Palmas de G.C.", "image": "picture6" },
+      { "id": "207", "userId": "107", "userName": "Vanesa", "age": 31, "title": "Open Mind", "location": "Granada", "image": "picture7" }
     ]
   }
 ]
