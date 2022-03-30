@@ -1,8 +1,12 @@
 import { DateTime } from 'luxon'
 import events from '~/data/events.json'
 
-export const getEventsGroupedByDate = () => {
-  return Promise.resolve(events.map(({ date, ...rest }) => ({ date: DateTime.fromISO(date), ...rest })))
+export const getEventsGroupedByDate = (date = null) => {
+  const items = events
+    .map(({ date, ...rest }) => ({ date: DateTime.fromISO(date), ...rest }))
+    .filter(x => !date || x.date.toLocaleString() == date.toLocaleString())
+
+  return Promise.resolve(items)
 }
 
 export const getEvent = async id => {
