@@ -7,9 +7,9 @@ import Header from '~/src/components/app/Header'
 import Footer from '~/src/components/app/Footer'
 
 const PageLayout = ({ title, children }) => {
-  const height = useStatusBarHeight()
+  const statusHeight = useStatusBarHeight()
 
-  return <SafeAreaView style={{ ...tw('flex h-full'), paddingTop: height }}>
+  return <SafeAreaView style={{ ...tw('flex h-full'), paddingTop: statusHeight }}>
     <Header title={title} />
     <View style={tw('flex-shrink flex-grow px-5')}>
       {children}
