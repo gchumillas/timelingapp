@@ -1,6 +1,6 @@
 This app was developed in React Native and TailwindCSS.
 
-<img src="https://user-images.githubusercontent.com/5312427/160925217-a5a23309-7fb2-4cbc-9788-b7534374fbdf.png" alt="Snapshot 1" width="320" /> <img src="https://user-images.githubusercontent.com/5312427/160925224-e3aaae4c-b35b-4bac-9204-b192ab9aae95.png" alt="Snapshot 2" width="320" />
+<img src="https://user-images.githubusercontent.com/5312427/160927418-1b0aea84-f7fe-4b8a-8f6c-9c861927867a.png" alt="Snapshot 1" width="320" /> <img src="https://user-images.githubusercontent.com/5312427/160927424-36909e92-eb8d-4c49-93fc-783f9e18e0a8.png" alt="Snapshot 2" width="320" />
 
 ## Filesystem structure
 
