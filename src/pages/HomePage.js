@@ -1,20 +1,26 @@
 import React from 'react'
 import { Text, View, FlatList, Image } from 'react-native'
+import { Outlet } from 'react-router-native'
 import { tw } from '~/src/libs/tailwind'
 import { getEventsGroupedByDate } from '~/src/providers/events'
 import PageLayout from '~/src/layouts/PageLayout'
 import DateSelector from '~/src/components/DateSelector'
 import images from '~/data/images'
+import Link from '../components/Link'
 
+// TODO: move this component to its own file
 const SectionItem = ({ events }) => {
   return <FlatList
     data={events}
     renderItem={({ item }) => {
+      // TODO: use w-1/2 instead of maxWidth
       return <View style={{ ...tw('flex-1 p-1'), maxWidth: '50%' }}>
-        <View style={tw('border')}>
-          <Text key={item.id}>{item.userName}</Text>
-          <Image source={images[item.image]} style={{ width: 50, height: 50, ...tw('border') }} resizeMode={'cover'} />
-        </View>
+        <Link to={`/events/${item.id}`}>
+          <View style={tw('border')}>
+            <Text key={item.id}>{item.userName}</Text>
+            <Image source={images[item.image]} style={{ width: 50, height: 50, ...tw('border') }} resizeMode={'cover'} />
+          </View>
+        </Link>
       </View>
     }}
     keyExtractor={item => item.id}
@@ -44,6 +50,7 @@ const HomePage = () => {
       </View>}
       keyExtractor={item => item.date}
     />
+    <Outlet />
   </PageLayout>
 }
 
