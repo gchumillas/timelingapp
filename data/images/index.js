@@ -1,4 +1,5 @@
 const images = {
+  map: require('~/data/images/map.png'),
   picture1: require('~/data/images/picture1.jpg'),
   picture2: require('~/data/images/picture2.jpg'),
   picture3: require('~/data/images/picture3.jpg'),
