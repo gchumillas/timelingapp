@@ -1,18 +1,22 @@
 import React from 'react'
-import { Text, View, FlatList } from 'react-native'
+import { Text, View, FlatList, Image } from 'react-native'
+import { tw } from '~/src/libs/tailwind'
 import { getEventsGroupedByDate } from '~/src/providers/events'
 import PageLayout from '~/src/layouts/PageLayout'
 import DateSelector from '~/src/components/inputs/DateSelector'
-import { tw } from '../libs/tailwind'
+import images from '~/data/images'
 
 const SectionItem = ({ events }) => {
   return <FlatList
     data={events}
-    renderItem={({ item, index }) => <View style={{ ...tw('flex-1 p-1'), maxWidth: '50%' }}>
-      <View style={tw('border')}>
-        <Text key={item.id}>{item.userName}</Text>
+    renderItem={({ item }) => {
+      return <View style={{ ...tw('flex-1 p-1'), maxWidth: '50%' }}>
+        <View style={tw('border')}>
+          <Text key={item.id}>{item.userName}</Text>
+          <Image source={images[item.image]} style={{ width: 50, height: 50, ...tw('border') }} resizeMode={'cover'} />
+        </View>
       </View>
-    </View>}
+    }}
     keyExtractor={item => item.id}
     numColumns={2} />
 }
@@ -32,7 +36,6 @@ const HomePage = () => {
 
   return <PageLayout title="Nearby events">
     <DateSelector numDays={7} value={dateFilter} onChange={setDateFilter} />
-    {/* <Image image={require('../../data/images/picture1.jpg')} style={{ width: 50, height: 50, ...tw('border') }} resizeMode={'cover'} /> */}
     <FlatList
       data={eventsGroupedByDate}
       renderItem={({ item }) => <View>
