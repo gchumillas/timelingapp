@@ -6,6 +6,7 @@ import { tw } from '~/src/libs/tailwind'
 
 const DateSelector = ({ numDays, value, onChange }) => {
   const now = DateTime.now()
+
   const days = React.useMemo(_ => {
     const ret = []
     for (let i = 0; i < numDays; i++) {
@@ -15,10 +16,18 @@ const DateSelector = ({ numDays, value, onChange }) => {
     return ret
   }, [now.toLocaleString()])
 
+  const doChange = date => {
+    if (value?.toLocaleString() == date.toLocaleString()) {
+      onChange(null)
+    } else {
+      onChange(date)
+    }
+  }
+
   return <View style={tw('flex flex-row')}>
     {days.map((date, i) => <Pressable
       key={i}
-      onPress={_ => onChange(date)}
+      onPress={_ => doChange(date)}
       style={cn(styles, 'item', { selected: date.toLocaleString() == value?.toLocaleString() })}
     >
       <Text style={tw('text-lg font-semibold leading-6')}>{date.day}</Text>
