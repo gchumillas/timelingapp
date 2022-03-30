@@ -38,7 +38,7 @@ const HomePage = () => {
           style={tw('-mx-2')} />
       </View>}
       keyExtractor={item => item.date}
-      style={tw('pt-3')}
+      contentContainerStyle={tw('py-3')}
     />
     <Outlet />
   </PageLayout>
