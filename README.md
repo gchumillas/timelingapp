@@ -10,7 +10,7 @@ src/components/app -- app specific components (header, footer, etc)
    /layouts        -- layouts
    /libs           -- libraries
    /pages          -- pages
-   /providers      -- functions to connect async resources (APIs, etc)
+   /providers      -- functions to connect to async resources (APIs, etc)
    /store          -- Redux store
    App.js          -- Application
 ```
