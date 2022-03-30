@@ -2,18 +2,18 @@
   {
     "date": "2022/03/29",
     "events": [
-      { "id": "201", "userId": "101", "userName": "Sandra", "title": "Dinner", "location": "Notting Hill", "image": "picture1", "isNew": true },
-      { "id": "202", "userId": "102", "userName": "María", "title": "Going out !!!!!",  "location": "Myfair, Greater London", "image": "picture2" },
-      { "id": "203", "userId": "103", "userName": "Antonio", "title": "Lunch", "location": "Shoreditch", "image": "picture3" },
-      { "id": "204", "userId": "104", "userName": "Lucía", "title": "Open",  "location": "Brick Lane", "image": "picture4" }
+      { "id": "201", "userId": "101", "userName": "Sandra", "title": "Dinner", "location": "Cádiz", "image": "picture1", "isNew": true },
+      { "id": "202", "userId": "102", "userName": "María", "title": "Going out !!!!!",  "location": "Sevilla", "image": "picture2" },
+      { "id": "203", "userId": "103", "userName": "Antonio", "title": "Lunch", "location": "Jerez", "image": "picture3" },
+      { "id": "204", "userId": "104", "userName": "Lucía", "title": "Open",  "location": "Vigo", "image": "picture4" }
     ]
   },
   {
     "date": "2022/03/28",
     "events": [
-      { "id": "205", "userId": "105", "userName": "Marco", "title": "Drinks", "location": "Convent Garden", "image": "picture5" },
-      { "id": "206", "userId": "106", "userName": "Juan", "title": "Culture",  "location": "Candem town", "image": "picture6" },
-      { "id": "207", "userId": "107", "userName": "Vanesa", "title": "Open Mind", "location": "Picadilly", "image": "picture7" }
+      { "id": "205", "userId": "105", "userName": "Marco", "title": "Drinks", "location": "Málaga", "image": "picture5" },
+      { "id": "206", "userId": "106", "userName": "Juan", "title": "Culture",  "location": "Las Palmas de G.C.", "image": "picture6" },
+      { "id": "207", "userId": "107", "userName": "Vanesa", "title": "Open Mind", "location": "Granada", "image": "picture7" }
     ]
   }
 ]
