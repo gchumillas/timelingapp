@@ -62,7 +62,15 @@ const EventPage = _ => {
         </View>
       </View>
       <View style={tw('relative flex-grow')}>
+        {/* background image */}
         <Image source={images.map} style={{ ...tw('absolute w-full h-full'), borderColor: 'white' }} resizeMode="cover" />
+        {/* rest of elements */}
+        <View style={tw('absolute bottom-0 w-full bg-white pt-6 pb-10 px-5 rounded-t-2xl flex')}>
+          <Text style={tw('text-xl text-center font-semibold mb-6')}>Are you interested?</Text>
+          <Pressable style={tw('bg-red-300 p-4 rounded-2xl')}>
+            <Text style={tw('text-xl text-center font-semibold')}>Show interest</Text>
+          </Pressable>
+        </View>
       </View>
     </View>
   </ModalLayout>
