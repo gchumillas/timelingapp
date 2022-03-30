@@ -14,9 +14,7 @@ const PageLayout = ({ title, children }) => {
     <View style={tw('flex-shrink flex-grow px-5')}>
       {children}
     </View>
-    <View style={tw('py-4 px-6')}>
-      <Footer />
-    </View>
+    <Footer />
     <StatusBar style="black" />
   </SafeAreaView>
 }
