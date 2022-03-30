@@ -2,7 +2,7 @@
   {
     "date": "2022/03/29",
     "events": [
-      { "id": "201", "userId": "101", "userName": "Sandra", "title": "Dinner", "location": "Cádiz", "image": "picture1", "isNew": true },
+      { "id": "201", "userId": "101", "userName": "Sandra", "title": "Dinner", "location": "Cádiz", "image": "picture1", "featured": true },
       { "id": "202", "userId": "102", "userName": "María", "title": "Going out !!!!!",  "location": "Sevilla", "image": "picture2" },
       { "id": "203", "userId": "103", "userName": "Antonio", "title": "Lunch", "location": "Jerez", "image": "picture3" },
       { "id": "204", "userId": "104", "userName": "Lucía", "title": "Open",  "location": "Vigo", "image": "picture4" }
