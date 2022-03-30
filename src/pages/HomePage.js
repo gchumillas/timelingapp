@@ -14,8 +14,7 @@ const SectionItem = ({ events }) => {
   return <FlatList
     data={events}
     renderItem={({ item }) => {
-      // TODO: use w-1/2 instead of maxWidth
-      return <View style={{ ...tw('flex-1 p-1'), maxWidth: '50%' }}>
+      return <View style={{ ...tw('p-1 w-1/2') }}>
         <Link to={`/events/${item.id}`}>
           <View style={tw('border')}>
             <Text key={item.id}>{item.userName}</Text>
