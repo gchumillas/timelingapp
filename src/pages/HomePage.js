@@ -14,17 +14,18 @@ const SectionItem = ({ events }) => {
   return <FlatList
     data={events}
     renderItem={({ item }) => {
-      return <View style={{ ...tw('p-1 w-1/2') }}>
+      return <View style={{ ...tw('w-1/2 pb-4 px-2') }}>
         <Link to={`/events/${item.id}`}>
-          <View style={{ ...tw('relative border'), aspectRatio: 4 / 5 }}>
-            <Image source={images[item.image]} style={{ ...tw('absolute w-full h-full') }} resizeMode="cover" />
+          <View style={{ ...tw('relative border rounded-lg overflow-hidden'), aspectRatio: 4 / 5 }}>
+            <Image source={images[item.image]} style={{ ...tw('absolute w-full h-full rounded-lg') }} resizeMode="cover" />
             <Text key={item.id}>{item.userName}</Text>
           </View>
         </Link>
       </View>
     }}
     keyExtractor={item => item.id}
-    numColumns={2} />
+    numColumns={2}
+    style={tw('-mx-2')} />
 }
 
 const HomePage = () => {

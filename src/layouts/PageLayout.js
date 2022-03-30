@@ -11,7 +11,7 @@ const PageLayout = ({ title, children }) => {
 
   return <SafeAreaView style={{ ...tw('flex h-full'), paddingTop: height }}>
     <Header title={title} />
-    <View style={tw('flex-shrink flex-grow px-2')}>
+    <View style={tw('flex-shrink flex-grow px-5')}>
       {children}
     </View>
     <View style={tw('py-4 px-6')}>

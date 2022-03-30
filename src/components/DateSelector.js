@@ -24,7 +24,7 @@ const DateSelector = ({ numDays, value, onChange }) => {
     }
   }
 
-  return <View style={tw('flex flex-row')}>
+  return <View style={tw('flex flex-row -m-1')}>
     {days.map((date, i) => <Pressable
       key={i}
       onPress={_ => doChange(date)}
@@ -37,7 +37,7 @@ const DateSelector = ({ numDays, value, onChange }) => {
 }
 
 const styles = StyleSheet.create({
-  item: { ...tw('flex-1 flex items-center border-1/2 border-gray-500 rounded-md m-1 p-1') },
+  item: tw('flex-1 flex items-center border-1/2 border-gray-500 rounded-md m-0.5 p-1'),
   selected: tw('border-red-300 bg-red-50')
 })
 
