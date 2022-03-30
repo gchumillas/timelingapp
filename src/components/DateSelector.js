@@ -21,15 +21,15 @@ const DateSelector = ({ numDays, value, onChange }) => {
       onPress={_ => onChange(date)}
       style={cn(styles, 'item', { selected: date.toLocaleString() == value?.toLocaleString() })}
     >
-      <Text>{date.day}</Text>
-      <Text>{date.weekdayShort}</Text>
+      <Text style={tw('text-lg font-semibold leading-6')}>{date.day}</Text>
+      <Text style={tw('text-xs')}>{date.weekdayShort}</Text>
     </Pressable>)}
   </View>
 }
 
 const styles = StyleSheet.create({
-  item: tw('flex-1 flex items-center border m-1'),
-  selected: tw('border-2')
+  item: { ...tw('flex-1 flex items-center border-1/2 border-gray-500 rounded-md m-1 p-1') },
+  selected: tw('border-red-300 bg-red-50')
 })
 
 export default DateSelector
