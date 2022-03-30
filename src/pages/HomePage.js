@@ -16,9 +16,9 @@ const SectionItem = ({ events }) => {
     renderItem={({ item }) => {
       return <View style={{ ...tw('p-1 w-1/2') }}>
         <Link to={`/events/${item.id}`}>
-          <View style={tw('border')}>
+          <View style={{ ...tw('relative border'), aspectRatio: 4 / 5 }}>
+            <Image source={images[item.image]} style={{ ...tw('absolute w-full h-full') }} resizeMode="cover" />
             <Text key={item.id}>{item.userName}</Text>
-            <Image source={images[item.image]} style={{ width: 50, height: 50, ...tw('border') }} resizeMode={'cover'} />
           </View>
         </Link>
       </View>
