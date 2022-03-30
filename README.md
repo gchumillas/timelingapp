@@ -17,7 +17,7 @@ src/components/app -- app specific components (header, footer, etc)
 
 ## Test the app
 
-This app was tested in iOS 15.4
+This app was tested on iOS 15.4
 
 ```bash
 # install libraries
