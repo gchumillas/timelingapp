@@ -8,6 +8,7 @@ export const getEventsGroupedByDate = () => {
 export const getEvent = async id => {
   const events = await getEventsGroupedByDate()
   const items = events.flatMap(x => x.events)
+  const item = items.find(x => x.id == id)
 
-  return items.find(x => x.id == id)
+  return { ...item, date: DateTime.fromISO(item.date) }
 }
