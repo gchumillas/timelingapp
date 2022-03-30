@@ -4,7 +4,7 @@ import { DateTime } from 'luxon'
 import cn from 'react-native-classnames'
 import { tw } from '~/src/libs/tailwind'
 
-const DateSelector = ({ numDays, value, onChange }) => {
+const DateSelector = ({ numDays, value, onChange, style }) => {
   const now = DateTime.now()
 
   const days = React.useMemo(_ => {
@@ -24,7 +24,7 @@ const DateSelector = ({ numDays, value, onChange }) => {
     }
   }
 
-  return <View style={tw('flex flex-row -m-1')}>
+  return <View style={[tw('flex flex-row -m-1'), style]}>
     {days.map((date, i) => <Pressable
       key={i}
       onPress={_ => doChange(date)}
