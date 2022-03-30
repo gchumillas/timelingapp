@@ -1,10 +1,14 @@
 import React from 'react'
-import { View, Text } from 'react-native'
-import { tw } from '~/src/libs/tailwind'
+import { View, Text, Pressable } from 'react-native'
+import { tw, getColor } from '~/src/libs/tailwind'
+import SettingsIcon from '~/assets/icons/settings.svg'
 
 const Header = ({ title }) => {
-  return <View style={tw('flex items-center p-5')}>
-    <Text>{title}</Text>
+  return <View style={tw('relative flex items-center p-5')}>
+    <Text style={tw('text-lg font-semibold')}>{title}</Text>
+    <Pressable style={{ ...tw('absolute right-5 top-6') }}>
+      <SettingsIcon width={20} height={20} color={getColor('gray-900')} />
+    </Pressable>
   </View>
 }
 

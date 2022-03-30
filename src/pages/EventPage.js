@@ -12,7 +12,7 @@ const EventPage = _ => {
 
   return <ModalLayout>
     <Pressable onPress={doClose}>
-      <LeftNavIcon width={30} height={30} color={getColor('gray-800')} />
+      <LeftNavIcon width={30} height={30} color={getColor('gray-900')} />
     </Pressable>
     <Text>Event page: {id}</Text>
   </ModalLayout>
