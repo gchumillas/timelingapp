@@ -1,11 +1,13 @@
 import React from 'react'
 import { SafeAreaView, View, Image, Text, Pressable } from 'react-native'
 import { useNavigate, useParams } from 'react-router-native'
-import { tw } from '~/src/libs/tailwind'
+import { DateTime } from 'luxon'
+import { tw, getColor } from '~/src/libs/tailwind'
 import { getEvent } from '~/src/providers/events'
 import ModalLayout from '~/src/layouts/ModalLayout'
 import LeftNavIcon from '~/assets/icons/left-nav.svg'
 import EllispsisIcon from '~/assets/icons/ellipsis.svg'
+import PlaceIcon from '~/assets/icons/place.svg'
 import images from '~/data/images'
 
 const EventPage = _ => {
@@ -48,6 +50,15 @@ const EventPage = _ => {
           </View>
         </View>
       </SafeAreaView>
+    </View>
+    <View style={tw('bg-red-100 flex items-center py-7 px-7')}>
+      <Text style={tw('text-3xl font-semibold mb-3')}>{event?.title}</Text>
+      <Text style={tw('text-xl font-semibold mb-4')}>{event?.date.toLocaleString(DateTime.DATETIME_MED)}</Text>
+      <Text style={tw('mb-4 text-center')}>{event?.description}</Text>
+      <View style={tw('flex flex-row')}>
+        <PlaceIcon height={18} color={getColor('gray-900')} />
+        <Text style={tw('text-center')}>{event?.location}</Text>
+      </View>
     </View>
   </ModalLayout>
 }
