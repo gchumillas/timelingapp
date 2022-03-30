@@ -38,7 +38,6 @@ const DateSelector = ({ numDays, value, onChange, style }) => {
 
 const styles = StyleSheet.create({
   item: tw('flex-1 flex items-center border-1/2 border-gray-500 rounded-md m-0.5 p-1'),
-  // TODO: the colors doesn't match the design one
   selected: tw('border-red-300 bg-red-50')
 })
 

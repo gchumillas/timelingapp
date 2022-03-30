@@ -9,8 +9,6 @@ import PlusIcon from '~/assets/icons/plus.svg'
 const Footer = _ => {
   return <View style={tw('flex flex-row justify-between items-center border-t border-gray-200 pt-4 px-6')}>
     <View style={tw('flex items-center')}>
-      {/* TODO: create Icon component */}
-      {/* TODO: add color property */}
       <ExploreIcon width={30} height={30} color={getColor('gray-900')} />
       <Text style={tw('text-xs')}>Explore</Text>
     </View>
