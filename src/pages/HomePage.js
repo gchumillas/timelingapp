@@ -5,8 +5,8 @@ import { tw } from '~/src/libs/tailwind'
 import { getEventsGroupedByDate } from '~/src/providers/events'
 import PageLayout from '~/src/layouts/PageLayout'
 import DateSelector from '~/src/components/DateSelector'
+import Link from '~/src/components/Link'
 import images from '~/data/images'
-import Link from '../components/Link'
 
 // TODO: move this component to its own file
 const SectionItem = ({ events }) => {
