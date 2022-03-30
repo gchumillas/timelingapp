@@ -3,7 +3,7 @@ import { Text, View, FlatList, Image } from 'react-native'
 import { tw } from '~/src/libs/tailwind'
 import { getEventsGroupedByDate } from '~/src/providers/events'
 import PageLayout from '~/src/layouts/PageLayout'
-import DateSelector from '~/src/components/inputs/DateSelector'
+import DateSelector from '~/src/components/DateSelector'
 import images from '~/data/images'
 
 const SectionItem = ({ events }) => {
