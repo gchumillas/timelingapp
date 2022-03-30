@@ -7,6 +7,7 @@ import { useEvents } from '~/src/store/events'
 import PageLayout from '~/src/layouts/PageLayout'
 import DateSelector from '~/src/components/DateSelector'
 import Link from '~/src/components/Link'
+import PlaceIcon from '~/assets/icons/place.svg'
 import images from '~/data/images'
 
 // TODO: move this component to its own file
@@ -18,7 +19,14 @@ const SectionItem = ({ events }) => {
         <Link to={`/events/${item.id}`}>
           <View style={{ ...tw('relative border rounded-lg overflow-hidden'), aspectRatio: 4 / 5 }}>
             <Image source={images[item.image]} style={{ ...tw('absolute w-full h-full rounded-lg') }} resizeMode="cover" />
-            <Text key={item.id}>{item.userName}</Text>
+            <View style={tw('absolute bottom-2 left-2')}>
+              <Text style={tw('text-white text-lg font-bold')}>{item.title}</Text>
+              <Text style={tw('text-white mb-0.5')}>With {item.userName}</Text>
+              <View style={tw('flex flex-row items-center -ml-0.5')}>
+                <PlaceIcon width={18} height={18} color="white" />
+                <Text style={tw('text-white text-xs')}>{item.location}</Text>
+              </View>
+            </View>
           </View>
         </Link>
       </View>
