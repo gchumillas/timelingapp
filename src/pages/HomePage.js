@@ -11,16 +11,16 @@ import Thumbnail from '../components/Thumbnail'
 
 const HomePage = () => {
   const [eventsGroupedByDate, setEventsGroupedByDate] = useEventsGroupedByDate()
-  const [dateFilter, setDateFilter] = React.useState(null)
+  const [dateFilter, setDateFilter] = React.useState(null) // DateTime | null
 
-  const loadEvents = async _ => {
-    const events = await getEventsGroupedByDate()
+  const loadEvents = async (date = null) => {
+    const events = await getEventsGroupedByDate(date)
     setEventsGroupedByDate(events)
   }
 
   React.useEffect(_ => {
-    loadEvents()
-  }, [])
+    loadEvents(dateFilter)
+  }, [dateFilter?.toLocaleString()])
 
   return <PageLayout title="Nearby events">
     <DateSelector numDays={7} value={dateFilter} onChange={setDateFilter} style={tw('pb-3')} />
