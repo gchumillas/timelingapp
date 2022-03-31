@@ -6,7 +6,7 @@ This app was developed in React Native and TailwindCSS.
 
 ```
 src/components/app -- app specific components (header, footer, etc)
-              /*   -- "pure" components (inputs, button, etc)
+              /*   -- "pure" components (inputs, buttons, etc)
    /layouts        -- layouts
    /libs           -- libraries
    /pages          -- pages
